@@ -14,25 +14,29 @@ package cse360assign2;
 public class AddingMachine {
 
 	private int total;
+	private String transactionHistory = "";
 	
 	public AddingMachine () {
 		total = 0;  // not needed - included for clarity
+		transactionHistory += total;
 	}
 	
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	public void add (int value) {
-		
+		transactionHistory += " + " + value;
+		total += value;
 	}
 	
 	public void subtract (int value) {
-		
+		transactionHistory += " - " + value;
+		total -= value;
 	}
 		
 	public String toString () {
-		return "";
+		return transactionHistory;
 	}
 
 	public void clear() {
